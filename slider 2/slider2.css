@@ -1,7 +1,12 @@
+body {
+  background: #fafafa;
+}
+
 .slider>img {
   height: 400px;
   width: 80%;
   border-radius: 10px;
+  margin: auto;
 }
 
 .slider {
@@ -18,20 +23,20 @@
   display: flex;
   width: 80%;
   margin-left: 150px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   align-items: center;
   justify-content: space-between;
 }
 
 #nav>#logo {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 350px;
   padding-right: 0px;
   text-align: center;
 }
 
 #nav>#second {
-  border: 2px solid orangered;
+  /* border: 2px solid orangered; */
   display: inline-flex;
   height: 70px;
   align-items: center;
@@ -40,11 +45,12 @@
 }
 
 #nav #search {
-  border: 2px solid rgb(22, 171, 39);
+  border: 0px solid rgb(22, 171, 39);
   height: 50px;
   width: 60%;
   border-radius: 15px;
   padding-left: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #nav button {
@@ -56,9 +62,10 @@
   color: white;
 }
 
+
 #boxes {
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 80%;
   margin: auto;
   justify-content: space-between;
@@ -66,13 +73,23 @@
   margin-bottom: 20px;
 }
 
+
+
 #boxes .box {
-  border: 2px solid blue;
+  /* background-color: #dc3226; */
+  /* border: 2px solid blue; */
   width: 15%;
   padding: 40px;
   align-items: center;
   text-align: center;
   margin: 10px;
+  border-radius: 15px;
+  border: 1px solid lightblue;
+}
+
+#boxes .box:hover {
+  cursor: pointer;
+  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 #boxslider {
@@ -82,65 +99,13 @@
 }
 
 #boxslider .item {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-width: 350px;
   height: 350px;
   line-height: 350px;
   text-align: center;
 }
 
-html,
-body {
-  position: relative;
-  /* height: 100%; */
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  width: 100%;
-  height: 350px;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-
-.swiper-slide img {
-  display: block;
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-
-}
 
 #gridBoxes {
   display: grid;
@@ -153,102 +118,141 @@ body {
 }
 
 #gridBoxes .gridb {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 25px;
 
 }
 
-main
-{width: 100%;
-  height: 840px;
-  /* margin: 10px; */
-  position: relative;
+a {
+  text-decoration: none;
 }
 
-main header{
-  width: 98%;
-  height: 60px;
-  margin:0 auto;
-  align-items: center;
+.pro-box {
+  width: 400px;
   display: flex;
-  padding: 20px;
-  justify-content: so;
-}
-
-header p span{
-  font-size:40px;
-  cursor: pointer;
-  color: #555;
-  margin: 0 5px;
-  width: 25px;
-  height: 30px;
-  display:inline-block;
-  line-height: 32px;
-  text-align: center;
-  border-radius: 3px;
-}
-header p span:hover{
-background: #222;
-color: whitesmoke;
-}
-section{
-  width: 98%;
-  height: 600px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-}
-section::-webkit-scrollbar{
-  display: none;
-}
-
-section.product{
-  min-width:24%;
-  height: 90%;
-  background: whitesmoke;
-  margin: 0 20px 0 0 ;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: rgb(236, 240, 244);
   border-radius: 20px;
-  position: relative;
-  left: 0;
-  transition: 0.5s;
-}
-picture{
-  width:100%;
-  height: 70%;
-  padding: 20px;
-  display: flex;
+  padding: 25px;
   overflow: hidden;
-  margin-bottom: 20px;
-}
-picture>img{
-  width: 90%;
-}
-
-.details, .button{
-width: 90%;
-margin: auto;
-padding: 0px;
-display: flex;
-justify-content:space-between;
-align-items: center;
-height: 50px;
-font-size:20px;
-color:#444;
-
+  transition: all ease 0.03s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.03s);
+  box-sizing: border-box;
 }
 
-small{
-  color: #555;
-}
-a{
-  text-decoration:none;
-  padding: 6px 14px;
-  font-size:15px;
-  margin: 5px 0 0 20px;
-  display: inline-block;
-  background:#6773ff;
-  color: white;
+.pro-box>a:nth-child(4) {
+  color: silver;
+  font-size: 10px;
 }
 
+.details {
+  display: flex;
+  justify-content: space-between;
+}
 
+.details>a:nth-child(2)>button {
+  border: 2px solid orangered;
+  background-color: transparent;
+  padding: 3px;
+  color: orangered;
+  font-size: 10px;
+}
+
+.details>a:nth-child(1) {
+  font-size: 15px;
+}
+
+.product-heading h1 {
+  /* border: 2px solid green; */
+  width: 30%;
+  margin-left: 200px;
+  color: #313131;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 35px;
+  position: relative;
+  line-height: 1.4;
+}
+
+hr {
+  width: 9%;
+  margin: 0px;
+}
+
+.bottom-box {
+  margin-top: 60px;
+  height: 580px;
+  display: flex;
+  /* border: 2px solid blue; */
+  text-align: center;
+  justify-content: space-around;
+  
+}
+
+.bottom-box .right-part {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* border: 2px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bottom-box .right-part>div {
+  /* border: 2px solid red; */
+  width: 80%;
+  margin-left: 80px;
+  padding: 15px;
+}
+
+.right-boxes .text {
+  display: flex;
+  /* border: 2px solid blue; */
+  width: 50%;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.right-part img {
+  border-radius: 50%;
+}
+
+.right-boxes .text h4 {
+  /* border: 2px solid red; */
+  padding: 15px;
+}
+
+.bottom-box .left-part {
+  /* border: 2px solid blue; */
+  height: 300px;
+  margin-top: 145px;
+  text-align: left;
+}
+
+.left-part hr {
+  width: 25%;
+}
+
+.left-part h1 {
+  /* border: 2px solid red; */
+  color: #313131;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.left-part p {
+  color: rgba(30, 29, 29, 0.766);
+}
+
+.middle-heading h2 {
+  /* border: 2px solid blue; */
+  width: 30%;
+  color: #313131;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 35px;
+  position: relative;
+  line-height: 1.4;
+  margin-left: 175px;
+}
