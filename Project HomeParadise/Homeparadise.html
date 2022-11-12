@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="slider2.css">
+    <link rel="stylesheet" href="Homeparadise.css">
     <script src="https://kit.fontawesome.com/05fc89279a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
@@ -40,8 +40,23 @@
             </select>
             <br>
             <input id="search" type="text" placeholder="Search for products">
-            <div>&#128722;Cart</div>
-            <button id="button">LOGIN / SIGNUP</button>
+            <div> <a href="#">&#128722;Cart <span class="top-corner">0</span></a></div>
+
+            <button id="trigger">LOGIN / SIGNUP</button>
+
+
+            <div class="modal-wrapper">
+                <div class="modal-container">
+                    <button id="cancel"> &times;</button>
+                    <br> <br>
+                    <form action="action">
+                        <label for="number" class="content">Enter your number to Signup or Login</label> <br>
+                        <input type="number" class="enter-num" minlength="10" maxlength="10" placeholder="Enter your phone number">
+                        <br>
+                    </form>
+                    <div class="inner-btn"><button class="continue">Continue</button></div>
+                </div>
+            </div>
         </div>
 
         <!-- **************************************************** -->
@@ -82,7 +97,7 @@
                         <a href="#">Rent </a>
                         <div class="details">
                             <a href="#"><span> &#8377; 209/mo</span></a>
-                            <a href="./page.html"><button>See More</button></a>
+                            <a href="Page1.html"><button>See More</button></a>
                         </div>
                     </div>
                 </div>
@@ -825,27 +840,34 @@
             <a href="#"></a>
             <h5>Policies</h5>
             <a href="#">
-                <p>Shipping Policy</p></a>
-                <a href="#">
-                    <p>Cancellation & Return</p></a>
-                    <a href="#">
-                        <p>Privacy Policy</p></a>
-                        <a href="#">
-                            <p> Rental Terms & Conditions</p></a>
-                            <a href="#">
-                                <p>Referral Terms & Conditions</p></a>
+                <p>Shipping Policy</p>
+            </a>
+            <a href="#">
+                <p>Cancellation & Return</p>
+            </a>
+            <a href="#">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="#">
+                <p> Rental Terms & Conditions</p>
+            </a>
+            <a href="#">
+                <p>Referral Terms & Conditions</p>
+            </a>
         </div>
 
 
         <div class="bottom-boxes">
             <h5>Need Help?</h5>
             <button>Chat with us (9AM - 6PM)</button>
-            <a href="#"><p><i class="fa-regular fa-paper-plane"></i> jo@homoparadise</p></a>
+            <a href="#">
+                <p><i class="fa-regular fa-paper-plane"></i> jo@homeparadise</p>
+            </a>
             <h5>DOWNLOAD APP</h5>
             <a href="#"><img src="images/playstore.jpg" alt=""></a>
         </div>
     </div>
-     
+
     <div class="last-part">
         <div class="last-row">
             <p>© 2022. Edunetwork Pvt. Ltd.</p>
@@ -859,12 +881,16 @@
                 <a href="#"><i class="fa-brands fa-dribbble"></i></a>
             </div>
 
-            <a href="#"><p>Go Up ^ </p></a>
+            <a href="#">
+                <p>Go Up ^ </p>
+            </a>
         </div>
     </div>
 </body>
 
 </html>
+
+
 
 <script>
 
@@ -879,6 +905,38 @@
         }
     }
     setInterval(slideshow, 5000)
+
+
+    let trigger = document.querySelector("#trigger")
+    let wrapper = document.querySelector(".modal-wrapper");
+    let close = document.querySelector("#cancel")
+
+    trigger.addEventListener("click", () => {
+        wrapper.classList.add("active");
+    })
+
+    close.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+    })
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key == "Escape") {
+            wrapper.classList.remove("active");
+        }
+    })
+
+    let inner_btn = document.querySelector("form")
+    let arr =[]
+    inner_btn.addEventListener("submit" , () =>{
+
+        let obj = {
+            number : document.querySelector(".enter-num").value
+        }
+        if(obj.number== ""){
+            alert("Enter Number");
+        }
+
+    })
 </script>
 
 
